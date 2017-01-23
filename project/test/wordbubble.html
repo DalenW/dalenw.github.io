@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Word Bubble</title>
+        <meta name="viewport" content="width=device-width">
+
+        <script src="//code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"/>
+        <script src="http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/alphabet.js" type="text/javascript"/>
+
+
+        <h1>Word Bubble</h1>
+
+
+    </head>
+    <body>
+        <canvas id='myCanvas'/>
+    <script src='http://s3.amazonaws.com/codecademy-content/courses/hour-of-code/js/bubbles.js' type='text/javascript'/>
+
+    <script type='text/javascript'>
+        var myName = prompt(&quot;Enter some text&quot;);
+
+        var red = [0, 100, 63];
+        var orange = [40, 100, 60];
+        var green = [75, 100, 40];
+        var blue = [196, 77, 55];
+        var purple = [280, 50, 60];
+        var letterColors = [red, orange, green, blue, purple];
+
+        drawName(myName, letterColors);
+
+        bubbleShape = &#39;circle&#39;;
+
+
+        bounceBubbles();
+        </script>
+    </body>
+</html>
