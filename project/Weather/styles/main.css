@@ -1,37 +1,69 @@
-/* http://paletton.com/#uid=73r2o0kzavwkKDqqoz+AvoPFYjr */
+/* http://paletton.com/#uid=31h0u0kryAdh1L3mpEEz5us-Ann */
 
-@fontface {
-    font-family: 'nmsfont';
-    font-style: normal;
-    src: url(geonms-webfont.ttf) format('truetype');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+* {
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-html {
-    background-color: #00B252
+body {
+    background-color: #0DC4B6;
 }
 
-header, .title {
+header,
+.title {
     margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #FFCF24;
+    width: 100%;
 }
 
 header {
     height: 50px;
-    width: 100%;
+}
 
-    background-color: #FB3800;
+main {
+    margin-top: 0px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 0px;
+    height: 100%;
+    background-color: white;
 }
 
 .title {
     font-size: 50px;
+    text-align: center;
+}
+
+.tempLoc {
+    text-align: center;
+    background-color: white;
 }
 
 .temperature {
-    font-family: nmsfont;
-    font-size: 50px
+    padding-top: 10%;
+    padding-bottom: 5%;
+    font-size: 80px
 }
 
 .location {
-    font-family: 'nmsfont';
-    font-size: 20px
+    font-size: 20px;
+    margin-right: 5%;
+    text-align: right;
+}
 
+h2 {
+    text-align: center;
+    margin-top: 5%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 10%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    background-color: white
 }

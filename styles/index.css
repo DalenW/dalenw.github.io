@@ -4,27 +4,24 @@
     background-color: #30D1C5;
 }
 
-.leftSpace {
-    width: 25%;
-
-}
-
-.rightSpace {
+td {
     width: 25%;
 }
 
-.gitButton, .projectButton {
+.headLink {
+    width: 100%;
+    color: white;
+}
+
+.headBox {
     width: 100%;
     text-align: center;
-    border: none;
-    color: white;
-    background-color: #30D1C5;
-    font-size: 23px;
-    border-radius: 25px;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
-.gitButton:hover, .projectButton:hover {
+.headBox:hover {
     background-color: #009A8F;
-    border-radius: 25px;
+    border-radius: 50px;
 }
-

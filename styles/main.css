@@ -13,6 +13,9 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.link {
     color: #FFB53B;
     margin-top: 4px;
     margin-bottom: 4px;
@@ -20,32 +23,31 @@ a {
     margin-right: 4px;
 }
 
-a:hover {
+.link:hover {
     color: white;
     background-color: #FFB53B;
     border-radius: 4px;
     margin: 4px;
 }
 
-header {
-    background-color: #30D1C5;
-    color: white;
-    width: 100%;
-    height: 10%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
+header,
 .title {
     width: 100%;
     height: 10%;
     margin-top: 0px;
     margin-bottom: 0px;
-    padding-top: 4%;
-    padding-bottom: 4%;
+    color: white;
+}
+
+header {
+    background-color: #30D1C5;
+}
+
+.title {
+    padding-top: 2%;
+    padding-bottom: 2%;
     text-align: center;
     font-size: 50px;
-    color: white;
 }
 
 main {
