@@ -5,30 +5,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-header {
-    background-color: #30D1C5;
-    color: white;
+body {
     width: 100%;
-    height: 10%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.title {
-    width: 100%;
-    height: 10%;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    text-align: center;
-}
-
-main {
-    width: auto;
-    height: 80%;
-    margin-left: 25%;
-    margin-right: 25%;
+    height: 100%;
+    min-height: 100%;
 }
 
 a {
@@ -47,13 +27,45 @@ a:hover {
     margin: 4px;
 }
 
+header {
+    background-color: #30D1C5;
+    color: white;
+    width: 100%;
+    height: 10%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.title {
+    width: 100%;
+    height: 10%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+}
+
+main {
+    width: auto;
+    height: 80%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+
 h2 {
     text-align: left;
     color: #FF6E62;
 }
 
 footer {
+    position: absolute;
+    bottom: 0;
+    height: 10%;
     width: 100%;
-    height: 10;
     text-align: center;
 }
