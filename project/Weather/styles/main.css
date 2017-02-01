@@ -1,13 +1,37 @@
+/* http://paletton.com/#uid=73r2o0kzavwkKDqqoz+AvoPFYjr */
+
+@fontface {
+    font-family: 'nmsfont';
+    font-style: normal;
+    src: url(geonms-webfont.ttf) format('truetype');
+}
+
+html {
+    background-color: #00B252
+}
+
+header, .title {
+    margin-top: 0px;
+}
+
 header {
     height: 50px;
     width: 100%;
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
 
-    background-color: aqua;
+    background-color: #FB3800;
 }
 
 .title {
-    font-size: 25;
+    font-size: 50px;
+}
+
+.temperature {
+    font-family: nmsfont;
+    font-size: 50px
+}
+
+.location {
+    font-family: 'nmsfont';
+    font-size: 20px
+
 }
