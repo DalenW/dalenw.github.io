@@ -1,0 +1,30 @@
+.linkTable {
+    width: 100%;
+    color: white;
+    background-color: #30D1C5;
+}
+
+.leftSpace {
+    width: 25%;
+
+}
+
+.rightSpace {
+    width: 25%;
+}
+
+.gitButton, .projectButton {
+    width: 100%;
+    text-align: center;
+    border: none;
+    color: white;
+    background-color: #30D1C5;
+    font-size: 23px;
+    border-radius: 25px;
+}
+
+.gitButton:hover, .projectButton:hover {
+    background-color: #009A8F;
+    border-radius: 25px;
+}
+
