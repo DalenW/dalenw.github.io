@@ -6,8 +6,10 @@
 }
 
 body {
-    background-color: #0DC4B6;
+    background-image: url(/project/Weather/pics/clouds.jpg);
+    width: 100%;
 }
+
 
 header,
 .title {
@@ -22,12 +24,14 @@ header {
 }
 
 main {
-    margin-top: 0px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-top: 7px;
+    margin-left: 15%;
+    margin-right: 15%;
     margin-bottom: 0px;
     height: 100%;
     background-color: white;
+    opacity: .85;
+
 }
 
 .title {
@@ -41,9 +45,9 @@ main {
 }
 
 .temperature {
+    margin:0px;
     padding-top: 10%;
-    padding-bottom: 5%;
-    font-size: 80px
+    font-size: 100px;
 }
 
 .location {
