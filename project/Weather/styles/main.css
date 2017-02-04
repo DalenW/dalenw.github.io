@@ -10,7 +10,6 @@ body {
     width: 100%;
 }
 
-
 header,
 .title {
     margin-top: 0px;
@@ -23,6 +22,17 @@ header {
     height: 50px;
 }
 
+.title {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 5%;
+}
+
 main {
     margin-top: 7px;
     margin-left: 15%;
@@ -31,35 +41,30 @@ main {
     height: 100%;
     background-color: white;
     opacity: .75;
-
-}
-
-.title {
-    font-size: 50px;
-    text-align: center;
 }
 
 .tempLoc {
-    text-align: center;
+
     background-color: white;
     opacity: 1;
 }
 
 .temperature {
-    margin:0px;
+    margin: 0px;
     padding-top: 10%;
     font-size: 100px;
+    text-align: center;
 }
 
 .location {
     font-size: 20px;
-    margin-right: 5%;
+    padding-right: 5%;
     text-align: right;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 5%;
+.weeklyDataInfo,
+.otherDataInfo {
+    padding-left: 5%;
 }
 
 footer {
@@ -67,7 +72,10 @@ footer {
     bottom: 0;
     height: 10%;
     width: 100%;
-    margin-bottom: 0px;
     text-align: center;
     background-color: white
+}
+
+.footer {
+    margin-bottom: 0px;
 }
