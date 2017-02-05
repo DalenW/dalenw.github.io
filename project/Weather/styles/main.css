@@ -10,6 +10,10 @@ body {
     width: 100%;
 }
 
+a {
+    text-decoration: none;
+}
+
 header,
 .title {
     margin-top: 0px;
@@ -28,13 +32,41 @@ header {
     margin-bottom: 0px;
 }
 
+.linkTable {
+    width: 100%;
+    color: white;
+    background-color: #FFCF24;
+}
+
+.headCol {
+    width: 20%;
+}
+
+.headLink {
+    width: 100%;
+}
+
+.headBox {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+}
+
+.headBox:hover {
+    background-color: #BA9100;
+    border-radius: 10px;
+}
+
 h2 {
     text-align: center;
     margin-top: 5%;
 }
 
 main {
-    margin-top: 7px;
+    margin-top: 41px;
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 0px;
@@ -44,7 +76,6 @@ main {
 }
 
 .tempLoc {
-
     background-color: white;
     opacity: 1;
 }
@@ -62,18 +93,36 @@ main {
     text-align: right;
 }
 
-.weeklyDataInfo,
-.otherDataInfo {
-    padding-left: 5%;
+.windDataInfo,
+.precipDataInfo {
+    text-align: center
+}
+
+.hourlyDataTable {
+    width: 100%;
+    text-align: center;
+}
+
+.hourlyDataTableTime {
+    width: 4%;
+    font-weight: bolder;
+    border-bottom: 3px;
+    border-bottom-color: black;
+}
+
+.hourlyDataTableTemp {
+    width: inherit;
+    font-style: italic;
 }
 
 footer {
-    position: absolute;
     bottom: 0;
-    height: 10%;
     width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     text-align: center;
-    background-color: white
+    background-color: white;
+    opacity: .75;
 }
 
 .footer {
