@@ -14,6 +14,9 @@ a {
     text-decoration: none;
 }
 
+
+/* header crap */
+
 header,
 .title {
     margin-top: 0px;
@@ -31,6 +34,9 @@ header {
     text-align: center;
     margin-bottom: 0px;
 }
+
+
+/* css for the header links */
 
 .linkTable {
     width: 100%;
@@ -65,8 +71,11 @@ h2 {
     margin-top: 5%;
 }
 
+
+/* main crap */
+
 main {
-    margin-top: 41px;
+    margin-top: 40px;
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 0px;
@@ -98,6 +107,16 @@ main {
     text-align: center
 }
 
+
+/* hourly data table */
+
+.hourFrame {
+    width: 100%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
 .hourlyDataTable {
     width: 100%;
     text-align: center;
@@ -115,6 +134,9 @@ main {
     font-style: italic;
 }
 
+
+/* Footer crap */
+
 footer {
     bottom: 0;
     width: 100%;
@@ -127,4 +149,13 @@ footer {
 
 .footer {
     margin-bottom: 0px;
+}
+
+
+/* Fix for main top spacing with the header */
+
+@media only screen and (max-width: 515px) {
+    main {
+        margin-top: 58px;
+    }
 }
