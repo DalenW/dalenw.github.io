@@ -27,6 +27,8 @@ header,
 
 header {
     height: 50px;
+    position: relative;
+    z-index: 1000;
 }
 
 .title {
@@ -91,7 +93,7 @@ main {
 
 .temperature {
     margin: 0px;
-    padding-top: 10%;
+    padding-top: 2%;
     font-size: 100px;
     text-align: center;
 }
@@ -115,16 +117,11 @@ main {
     overflow-x: auto;
 }
 
-.hourFrame {
-    width: 100%;
-    border: none;
-    margin: 0px;
-    padding: 0px;
-}
-
 .hourlyDataTable {
     width: 100%;
     text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .hourlyDataTableTime {
@@ -161,6 +158,11 @@ footer {
 
 @media only screen and (max-width: 515px) {
     main {
-        margin-top: 58px;
+        margin-top: 40px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .headSpace {
+        width: 5%;
     }
 }
