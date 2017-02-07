@@ -110,6 +110,11 @@ main {
 
 /* hourly data table */
 
+.hourlyDataTableDiv {
+    width: 100%;
+    overflow-x: auto;
+}
+
 .hourFrame {
     width: 100%;
     border: none;
