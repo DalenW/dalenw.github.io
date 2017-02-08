@@ -14,6 +14,9 @@ a {
     text-decoration: none;
 }
 
+table {
+    border: 0;
+}
 
 /* header crap */
 
