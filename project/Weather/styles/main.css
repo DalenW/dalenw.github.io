@@ -125,6 +125,11 @@ main {
 
 /* hourly data table */
 
+.hourlyData {
+    display: block;
+    visibility: visible;
+}
+
 .hourlyDataTableDiv {
     width: 100%;
     overflow-x: auto;
@@ -177,5 +182,10 @@ footer {
     }
     .headSpace {
         width: 5%;
+    }
+
+    .hourlyData {
+        display: none;
+        visibility: hidden;
     }
 }
