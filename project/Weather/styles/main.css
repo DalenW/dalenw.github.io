@@ -128,11 +128,14 @@ main {
 .hourlyData {
     display: block;
     visibility: visible;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .hourlyDataTableDiv {
     width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .hourlyDataTable {
@@ -169,23 +172,4 @@ footer {
 
 .footer {
     margin-bottom: 0px;
-}
-
-
-/* Fix for main top spacing with the header */
-
-@media only screen and (max-width: 515px) {
-    main {
-        margin-top: 40px;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    .headSpace {
-        width: 5%;
-    }
-
-    .hourlyData {
-        display: none;
-        visibility: hidden;
-    }
 }

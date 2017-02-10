@@ -8,6 +8,8 @@
 
     <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link type="text/css" rel="stylesheet" href="styles/main.css">
+    <link type="text/css" rel="stylesheet" href="styles/mobile.css">
+    <link type="text/css" rel="stylesheet" href="styles/desktop.css">
 </head>
 
 <body>
@@ -51,6 +53,16 @@
             </table>
         </div>
 
+        <div class="windData">
+            <h2>Wind</h2>
+            <p class="windDataInfo" id="windData">1 - 5 MPH, Southwest</p>
+        </div>
+
+        <div class="precipData">
+            <h2>Precipitation</h2>
+            <p class="precipDataInfo" id="precipitation">0</p>
+        </div>
+
         <div class="hourlyData">
             <h2>Hourly</h2>
             <div class="hourlyDataTableDiv">
@@ -80,7 +92,6 @@
                         <td class="hourlyDataTableTime" id="h21">9 PM</td>
                         <td class="hourlyDataTableTime" id="h22">10 PM</td>
                         <td class="hourlyDataTableTime" id="h23">11 PM</td>
-
                     </tr>
                     <tr class="hourlyDataTableRow">
                         <td class="hourlyDataTableTemp" id="t0">60</td>
@@ -112,19 +123,11 @@
             </div>
         </div>
 
-        <div class="windData">
-            <h2>Wind</h2>
-            <p class="windDataInfo" id="windData">1 - 5 MPH, Southwest</p>
-        </div>
-
-        <div class="precipData">
-            <h2>Precipitation</h2>
-            <p class="precipDataInfo" id="precipitation">0</p>
-        </div>
     </main>
 
     <footer>
         <h5 class="footer">Made by Dalen Ward</h5>
+        <a href="plan.html">My plan</a>
         <h6 class="footer">Last Updated Feburary 3, 2017</h6>
     </footer>
 </body>
