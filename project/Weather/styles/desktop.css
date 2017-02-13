@@ -3,25 +3,96 @@
         background: none;
         margin-left: 0;
         margin-right: 0;
+        display: flex;
+        flex-wrap: wrap;
     }
-
-    .topData, .windData, .precipData {
+    .topData,
+    .windData,
+    .precipData,
+    .hourlyData {
         background: white;
-        display: inline-block;
         border-radius: 7px;
     }
-
     .topData {
-        width: 50%;
-        margin-left: 5%;
+        order: 1;
+    }
+    .windData {
+        order: 2;
+    }
+    .precipData {
+        order: 3;
+    }
+    .hourlyData {
+        order: 4;
+    }
+    .topData,
+    .windData,
+    .precipData {
         margin-top: 5%;
+        margin-bottom: 3%;
+    }
+    .topData {
+        flex-grow: 2;
+        margin-left: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-right: 1%;
+    }
+    .windData,
+    .precipData {
+        flex-grow: 1;
+        padding-left: 3%;
+        padding-right: 3%;
+        margin-right: 1%;
+    }
+    .precipData {
         margin-right: 5%;
+    }
+    .hourlyData {
+        width: 100%;
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #hourlyDataTitle,
+    #windDataTitle,
+    #precipDataTitle {
+        margin: 0%;
+    }
+    #hourlyDataTitle {
+        padding-top: 2%;
         padding-bottom: 2%;
     }
-
-    .windData {
-        width: 20%;
-        height: auto;
+    #windDataTitle,
+    #precipDataTitle {
+        padding-top: 5%;
     }
-
+    /* Wind Box */
+    .windData {
+        flex-direction: column;
+    }
+    #windDataTitle {
+        flex-grow: 1;
+    }
+    .windDesktopSpacing {
+        flex-grow: 2;
+    }
+    .windDataInfo {
+        flex-grow: 1;
+    }
+    /* Precipitation Box */
+    .precipData {
+        flex-direction: column;
+    }
+    #precipDataTitle {
+        flex-grow: 1;
+    }
+    .precipDesktopSpacing {
+        flex-grow: 2;
+    }
+    .precipDataInfo {
+        flex-grow: 1;
+        font-size: 50px;
+        margin: 0%;
+    }
 }
