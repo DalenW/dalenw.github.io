@@ -84,15 +84,13 @@
     .precipData {
         flex-direction: column;
     }
-    #precipDataTitle {
+    .precipDataBoxTop {
         flex-grow: 1;
     }
-    .precipDesktopSpacing {
+    .precipDataBoxMiddle {
         flex-grow: 2;
     }
-    .precipDataInfo {
+    .precipDataBoxBottom {
         flex-grow: 1;
-        font-size: 50px;
-        margin: 0%;
     }
 }
