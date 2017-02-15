@@ -8,8 +8,7 @@
         width: 5%;
     }
 
-    .hourlyData {
-        display: none;
-        visibility: hidden;
+    #windDirection {
+        text-align: center;
     }
 }
