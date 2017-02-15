@@ -18,6 +18,11 @@ table {
     border: 0;
 }
 
+h2 {
+    text-align: center;
+    margin-top: 5%;
+}
+
 
 /* header crap */
 
@@ -72,11 +77,6 @@ header {
     border-radius: 10px;
 }
 
-h2 {
-    text-align: center;
-    margin-top: 5%;
-}
-
 
 /* main crap */
 
@@ -88,6 +88,7 @@ main {
     height: 100%;
     background-color: white;
     opacity: .75;
+    overflow: auto;
 }
 
 #temperature {
@@ -97,30 +98,28 @@ main {
     text-align: center;
 }
 
-.topDataTable {
-    width: 100%;
-    margin-top: 5%;
-}
-
-.topDataTableBox {
-    width: 33%;
-    text-align: center;
-    font-size: 20px;
-}
-
-#forcast {
-    text-align: left;
-    padding-left: 5%;
-}
-
-#location {
-    text-align: right;
-    padding-right: 5%;
-}
-
 .windDataInfo,
 .precipDataInfo {
     text-align: center
+}
+
+
+/* temperature data */
+
+.tempBottomSection {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.forcastSection,
+.highLowSection,
+.locationSection {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
 }
 
 
@@ -131,6 +130,7 @@ main {
     visibility: visible;
     margin-left: 3%;
     margin-right: 3%;
+    padding-bottom: 1%;
 }
 
 .hourlyDataTableDiv {
@@ -156,6 +156,10 @@ main {
 .hourlyDataTableTemp {
     width: inherit;
     font-style: italic;
+}
+
+#windDirection {
+    text-align: center;
 }
 
 
