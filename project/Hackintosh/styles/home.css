@@ -5,5 +5,13 @@
 }
 
 #introTitle {
-    color: #E70F19;
+    font-size: 35px;
+}
+
+
+/* Guide List */
+
+#guideListTitle {
+    font-size: 33px;
+    text-align: center;
 }

@@ -1,14 +1,27 @@
 /* http://paletton.com/#uid=55B0u0kvAnxmOuCtZtuBRjaLhdO */
-@import url('https://fonts.googleapis.com/css?family=VT323');
+
 @import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=VT323');
 
 * {
     font-family: 'Abel', sans-serif;
 }
 
+/* Global Stuff */
+
 a {
     text-decoration: none;
 }
+
+h2 {
+    color: #E70F19;
+}
+
+h3 {
+    color: #790047;
+}
+
+
 
 /* Header */
 header {
@@ -17,10 +30,11 @@ header {
 }
 
 #title {
+    text-decoration: none;
     margin-top: 0%;
     font-family: 'VT323', monospace;
     color: white;
-    font-size: 50px;
+    font-size: 80px;
     padding: 15px;
 }
 
@@ -29,3 +43,4 @@ main {
     padding-left: 10%;
     padding-right: 10%;
 }
+
