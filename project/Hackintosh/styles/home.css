@@ -15,3 +15,35 @@
     font-size: 33px;
     text-align: center;
 }
+
+.guideList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.guideListBox {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+.guideListBoxImage {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+}
+
+.guideListBoxTitleBox {
+    background-color: white;
+    position: absolute;
+    width: inherit;
+}
+
+.guideListBoxTitle {
+    padding-left: 10px;
+}
