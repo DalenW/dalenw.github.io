@@ -1,11 +1,18 @@
 //test editing the html content
 document.getElementById("temperature").innerHTML = "90";
 
-//read the json file?
+var weatherData;
+
 $.ajax({
     url: "weather.json",
     success: function(data) {
-        var obj = JSON.parse(data);
+        console.log(data);
+        weatherData = JSON.parse(data);
+
+        //console.log(weatherData);
     }
 });
+
+document.getElementById("precipitation").innerHTML = weatherData;
+//read the json file
 
