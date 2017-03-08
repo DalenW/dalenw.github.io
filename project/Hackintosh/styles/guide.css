@@ -29,6 +29,17 @@ p {
 }
 
 quote {
-    background-color: ##f9f2f4;
+    background-color: #f9f2f4;
     color: #F0454D;
+}
+
+.code {
+    margin-left: 25px;
+    background-color: lightgray;
+    color: #C0378A;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+
 }
