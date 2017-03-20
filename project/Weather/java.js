@@ -23,22 +23,32 @@ function myWeatherData() {
             console.log(data);
             weatherData = data;
             console.log(weatherData);
-            setData();
+            setData("Franklin");
         }
     });
 }
 
-function setData() {
+function setData(city) {
     if (weatherData == null)
         console.log("WeatherData is null");
     else {
         console.log("Setting my weather data");
 
-        document.getElementById("title").innerHTML = weatherData.Franklin.City + ": Weather Home";
-        document.getElementById("precipitation").innerHTML = weatherData.Franklin.Precip;
-        document.getElementById("forcast").innerHTML = weatherData.Franklin.Summary;
-        document.getElementById("windData").innerHTML = weatherData.Franklin.Wind + " MPH";
-        document.getElementById("location").innerHTML = weatherData.Franklin.City + ", " + weatherData.Franklin.State;
-        document.getElementById("highLow").innerHTML = "Hi / Low: " + weatherData.Franklin.High + " / " + weatherData.Franklin.Low;
+        var data;
+
+        if (city == "Franklin")
+            data = weatherData.Franklin;
+
+
+        document.getElementById("title").innerHTML = data.City + ": Weather Home";
+        document.getElementById("precipitation").innerHTML = data.Precip;
+        document.getElementById("forcast").innerHTML = data.Summary;
+        document.getElementById("windData").innerHTML = data.Wind + " MPH";
+        document.getElementById("location").innerHTML = data.City + ", " + data.State;
+        document.getElementById("highLow").innerHTML = "Hi / Low: " + data.High + " / " + data.Low;
+
+        for(var i = 0; i < 24; i++)
+            document.getElementById("t" + i).innerHTML = data.Hourly[i];
+        
     }
 }
