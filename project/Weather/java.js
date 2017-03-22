@@ -34,7 +34,6 @@ function setData(city) {
     else {
         console.log("Setting my weather data");
 
-<<<<<<< HEAD
         var data;
 
         if (city == "Franklin")
@@ -51,7 +50,6 @@ function setData(city) {
         for(var i = 0; i < 24; i++)
             document.getElementById("t" + i).innerHTML = data.Hourly[i];
         
-=======
         document.getElementById("title").innerHTML = weatherData.Franklin.City + ": Weather Home";
         document.getElementById("precipitation").innerHTML = weatherData.Franklin.Precip;
         document.getElementById("forcast").innerHTML = weatherData.Franklin.Summary;
@@ -63,6 +61,5 @@ function setData(city) {
         for (var i = 0; i < 24; i++) {
             document.getElementById("t" + i).innerHTML = weatherData.Franklin.Hourly[i];
         }
->>>>>>> origin/master
     }
 }
