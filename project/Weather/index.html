@@ -3,28 +3,36 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Weather Home</title>
+  <title>Weather Center</title>
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <link rel="stylesheet" href="/jsonweather-html/css/weather-style.css" type="text/css" media="screen">
+  <link rel="stylesheet" type="text/css" href="css/weather-style.css" media="screen">
 </head>
 <!-- *********************************************
-* Who Did You Collaborate With On This Assessment?
-* 1. Your own name goes here
+* Who Did You Collaborate With On This Activity?
+* 1.Dalen Ward
 * 2.
 * 3.
 * 4.
 * 5.
 * ******************************************** -->
+
 <body>
   <div id="wrapper">
-    <header id="page-header"></header>
-    <nav id="page-nav"></nav>
+    <header id="page-header">
+      <h1>Weather Center</h1>
+      <h2 class="tagline">Know your weather</h2>
+    </header>
+    <nav id="page-nav">
+      <ul class="flexlist">
+        <li><a href="." title="Weather Center Current Location">Current</a></li>
+        <li><a href="views/franklin.html" title="Weather in Franklin, ID">Franklin</a></li>
+        <li><a href="views/greenville.html" title="Weather in Greenville, SC">Greenville</a></li>
+        <li><a href="views/springfield.html" title="Weather in Springfield, IL">Springfield</a></li>
+      </ul>
+    </nav>
     <main id="page-main">
       <section class="weather-container">
-        <div id="cover">
-          <div id="status">Loading...</div>
-        </div>
         <h1 id="cityDisplay"></h1>
         <h2>Current Conditions</h2>
         <ul id="current_conditions">
@@ -33,16 +41,20 @@
           <li id="add1"></li>
           <li id="add2"></li>
           <li id="add3"></li>
+
         </ul>
       </section>
     </main>
     <footer id="page-footer">
-      <div id="footer-content"></div>
-      <small>Last updated: </small>
+      <ul class="flexlist">
+        <li>Weather Center 2010 - 2016</li>
+        <li><img src="images/wulogo_rev.png" alt="Weatherunderground logo" title="All weather data provided by WeatherUnderground.com"></li>
+        <li><small>Last updated: </small></li>
+      </ul>
     </footer>
-    <script src="/jsonweather-html/scripts/jquery-3.0.0.min.js"></script>
-    <script src="/jsonweather-html/scripts/modules.js"></script>
-    <script src=""></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="scripts/menu.js"></script>
   </div>
 </body>
 

@@ -1,25 +1,43 @@
 var weatherData;
 
-myWeatherData();
+console.log("The scripts have started!");
 
-function weatherAPI() {
+//$("main").hide();
+
+//myWeatherData();
+getGeoLocation();
+
+function setData(data) {
+    console.log("Setting Data.");
+    //$("main").show();
+
+    $("#temperature").html(Math.round(data.current_observation.temp_f));
+    $("#forcast").html(data.current_observation.weather);
+    //$("#highLow").html()
+    $("#location").html(data.location.city + ", " + data.location.state);
+    $("#windData").html(data.current_observation.wind_mph + " MPH");
+    $("#windDirection").html(data.current_observation.wind_dir);
+    $("precipitation").html(data.current_observation.precip_today_metric);
+}
+
+function weatherAPI(input) {
     $.ajax({
-        url: "http://api.wunderground.com/api/5b0759a252c90180/geolookup/conditions/q/IA/Cedar_Rapids.json",
+        url: "http://api.wunderground.com/api/5b0759a252c90180/geolookup/conditions/q/" + input + ".json",
         dataType: "jsonp",
         success: function (parsed_json) {
-            var location = parsed_json['location']['city'];
-            var temp_f = parsed_json['current_observation']['temp_f'];
-            alert("Current temperature in " + location + " is: " + temp_f);
+            console.log(parsed_json);
+            setData(parsed_json);
         }
     });
 }
 
 function myWeatherData() {
+    console.log("Parsing the JSON file.");
     $.ajax({
-        url: "weather.json",
+        url: "scripts/weather.json",
         dataType: "json",
         success: function (data) {
-            console.log("Reading the JSON file");
+            console.log("Reading the JSON file.");
             console.log(data);
             weatherData = data;
             console.log(weatherData);
@@ -28,6 +46,7 @@ function myWeatherData() {
     });
 }
 
+/*
 function setData(city) {
     if (weatherData == null)
         console.log("WeatherData is null");
@@ -62,4 +81,20 @@ function setData(city) {
             document.getElementById("t" + i).innerHTML = weatherData.Franklin.Hourly[i];
         }
     }
+}
+*/
+
+function getGeoLocation() {
+    console.log('Getting Location...');
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var lat = position.coords.latitude;
+            var long = position.coords.longitude;
+            console.log("Got location.");
+            weatherAPI(lat + "," + long);
+        });
+    } else {
+        console.log("Your browser doesn't support Geolocation or it is not enabled!");
+    }
+
 }
