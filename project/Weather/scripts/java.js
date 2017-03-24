@@ -9,6 +9,9 @@ getGeoLocation();
 
 function setData(data) {
     console.log("Setting Data.");
+    //reset the display search results 
+    $("#searchResults").html("");
+    //document.getElementById("searchBar").setAttribute("value", " "); //this kills the results display for some reason
     //$("main").show();
 
     $("#temperature").html(Math.round(data.current_observation.temp_f));
@@ -17,10 +20,11 @@ function setData(data) {
     $("#location").html(data.location.city + ", " + data.location.state);
     $("#windData").html(data.current_observation.wind_mph + " MPH");
     $("#windDirection").html(data.current_observation.wind_dir);
-    $("precipitation").html(data.current_observation.precip_today_metric);
+    $("#precipitation").html(data.current_observation.precip_today_metric);
 }
 
 function weatherAPI(input) {
+    console.log("Getting API. Input: " + input);
     console.log("https://api.wunderground.com/api/5b0759a252c90180/geolookup/conditions/q/" + input + ".json");
     $.ajax({
         url: "https://api.wunderground.com/api/5b0759a252c90180/geolookup/conditions/q/" + input + ".json",
@@ -47,44 +51,6 @@ function myWeatherData() {
     });
 }
 
-/*
-function setData(city) {
-    if (weatherData == null)
-        console.log("WeatherData is null");
-    else {
-        console.log("Setting my weather data");
-
-        var data;
-
-        if (city == "Franklin")
-            data = weatherData.Franklin;
-
-
-        document.getElementById("title").innerHTML = data.City + ": Weather Home";
-        document.getElementById("precipitation").innerHTML = data.Precip;
-        document.getElementById("forcast").innerHTML = data.Summary;
-        document.getElementById("windData").innerHTML = data.Wind + " MPH";
-        document.getElementById("location").innerHTML = data.City + ", " + data.State;
-        document.getElementById("highLow").innerHTML = "Hi / Low: " + data.High + " / " + data.Low;
-
-        for(var i = 0; i < 24; i++)
-            document.getElementById("t" + i).innerHTML = data.Hourly[i];
-        
-        document.getElementById("title").innerHTML = weatherData.Franklin.City + ": Weather Home";
-        document.getElementById("precipitation").innerHTML = weatherData.Franklin.Precip;
-        document.getElementById("forcast").innerHTML = weatherData.Franklin.Summary;
-        document.getElementById("windData").innerHTML = weatherData.Franklin.Wind + " MPH";
-        document.getElementById("windDirection").innerHTML = weatherData.Franklin.Direction;
-        document.getElementById("location").innerHTML = weatherData.Franklin.City + ", " + weatherData.Franklin.State;
-        document.getElementById("highLow").innerHTML = "Hi / Low: " + weatherData.Franklin.High + " / " + weatherData.Franklin.Low;
-
-        for (var i = 0; i < 24; i++) {
-            document.getElementById("t" + i).innerHTML = weatherData.Franklin.Hourly[i];
-        }
-    }
-}
-*/
-
 function getGeoLocation() {
     console.log('Getting Location...');
     if (navigator.geolocation) {
@@ -96,6 +62,54 @@ function getGeoLocation() {
         });
     } else {
         console.log("Your browser doesn't support Geolocation or it is not enabled!");
+    }
+
+}
+
+$("#searchBar").keyup(function () {
+    var value = $("#searchBar").val();
+
+    $.getJSON("//autocomplete.wunderground.com/aq?query=" + value + "&cb=?", function (data) {
+        console.log("Search Results:");
+        console.log(data);
+        displaySearchResults(data);
+    }); // end getJSON
+});
+
+function displaySearchResults(data) {
+    console.log("Dsiplaying Search Results");
+
+    var arrayLength = data.RESULTS.length;
+    //console.log(arrayLength);
+    if (arrayLength > 5)
+        arrayLength = 5;
+
+    var searchHTML = "";
+
+    for (var i = 0; i < arrayLength; i++) {
+        //"<p class=/"result/"><a onlick="weatherAPI()" href=/"#/">NAME</a></p>"
+
+        var input = data.RESULTS[i].lat + "," + data.RESULTS[i].lon;
+
+        searchHTML += "<p class=\"result\"><a href=\"javascript:weatherAPILL(" + input + ");\">" + data.RESULTS[i].name + "</a></p>";
+    }
+    $("#searchResults").html(searchHTML);
+}
+
+function weatherAPILL(lat, long) {
+    weatherAPI(lat + "," + long);
+}
+
+function onSearchSubmit() {
+    console.log("Submitted search form.");
+    var value = $("#searchBar").val();
+
+    if (value == "")
+        getGeoLocation();
+    else {
+        $.getJSON("//autocomplete.wunderground.com/aq?query=" + value + "&cb=?", function (data) {
+            weatherAPI(data.RESULTS[0].lat + "," + data.RESULTS[0].lon);
+        });
     }
 
 }

@@ -17,27 +17,14 @@
         <!-- Top bar with title and hamburger -->
         <h1 class="title">Weather</h1>
 
-        <table class="linkTable">
-            <tr>
-                <td class="headCol headSpace"></td>
-                <td class="headCol">
-                    <a href="" class="headLink">
-                        <div class="headBox">Franklin, ID</div>
-                    </a>
-                </td>
-                <td class="headCol">
-                    <a href="" class="headLink">
-                        <div class="headBox">Greenville, SC</div>
-                    </a>
-                </td>
-                <td class="headCol">
-                    <a href="" class="headLink">
-                        <div class="headBox">Springfield, IL</div>
-                    </a>
-                </td>
-                <td class="headCol headSpace"></td>
-            </tr>
-        </table>
+        <form method="get" action="javascript:onSearchSubmit()" id="srchfrm" class="search">
+            <input type="search" name="query" id="searchBar" placeholder="Search">
+            <input type="submit" name="submit" value="Go" id="searchButton">
+        </form>
+
+        <div id="searchResults">
+           <!-- <p class=/"result/"><a onlick="weatherAPI()" href=/"#/">NAME</a></p> -->
+        </div>
     </header>
 
     <main>
@@ -140,10 +127,8 @@
             </div>
         </div>
     </main>
-    <script
-            src="https://code.jquery.com/jquery-3.1.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous">
     </script>
     <script src="scripts/java.js"></script>
 
