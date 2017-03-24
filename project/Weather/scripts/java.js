@@ -21,8 +21,9 @@ function setData(data) {
 }
 
 function weatherAPI(input) {
+    console.log("https://api.wunderground.com/api/5b0759a252c90180/geolookup/conditions/q/" + input + ".json");
     $.ajax({
-        url: "http://api.wunderground.com/api/5b0759a252c90180/geolookup/conditions/q/" + input + ".json",
+        url: "https://api.wunderground.com/api/5b0759a252c90180/geolookup/conditions/q/" + input + ".json",
         dataType: "jsonp",
         success: function (parsed_json) {
             console.log(parsed_json);
