@@ -1,0 +1,14 @@
+{
+    "guides": [
+        {
+            "name": "Creating a Bootable USB",
+            "image": "USB",
+            "guide": "test"
+        },
+        {
+            "name": "Configuring Clover",
+            "image": "Clover",
+            "guide": "test"
+        }
+    ]
+}

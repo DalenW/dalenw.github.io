@@ -1,0 +1,147 @@
+/* http://paletton.com/#uid=55B0u0kvAnxmOuCtZtuBRjaLhdO */
+
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+* {
+    font-family: 'Abel', sans-serif;
+}
+
+/* Global Stuff */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h2 {
+    color: #E70F19;
+}
+
+/* Header */
+header {
+    background-color: black;
+    text-align: center;
+}
+
+#title {
+    text-decoration: none;
+    margin-top: 0%;
+    font-family: 'VT323', monospace;
+    color: white;
+    font-size: 80px;
+    padding: 15px;
+}
+
+main {
+    margin: 0px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/* Intro */
+
+.intro {
+    text-align: center;
+}
+
+#introTitle {
+    font-size: 35px;
+}
+
+
+/* Guide List */
+
+#guideListTitle {
+    font-size: 33px;
+    text-align: center;
+}
+
+#guideList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+}
+
+.guideListBox {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+.guideListBoxImage {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+}
+
+.guideListBoxTitleBox {
+    background-color: white;
+    position: absolute;
+    width: inherit;
+}
+
+.guideListBoxTitle {
+    padding-left: 10px;
+}
+
+.guideListBox:hover {
+    width: 205px;
+    height: 205px;
+    box-shadow: 0 0 20px #000;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* Guide CSS */
+
+#guideTitle {
+    text-align: center;
+    font-size: 35px;
+}
+
+h6 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    margin-top: 15px;
+}
+
+.link {
+    color: #EB6E0F;
+}
+
+.link:hover {
+    color: white;
+    background-color: #EB6E0F;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 5px;
+}
+
+p {
+    margin: 4px;
+    padding-left: 25px;
+    padding-top: 5px;
+}
+
+quote {
+    background-color: #f9f2f4;
+    color: #F0454D;
+}
+
+.code {
+    margin-left: 25px;
+    background-color: lightgray;
+    color: #C0378A;
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 5px;
+}
