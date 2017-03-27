@@ -91,7 +91,8 @@ function displaySearchResults(data) {
 
         var input = data.RESULTS[i].lat + "," + data.RESULTS[i].lon;
 
-        searchHTML += "<p class=\"result\"><a href=\"javascript:weatherAPILL(" + input + ");\">" + data.RESULTS[i].name + "</a></p>";
+        //searchHTML += "<p class=\"result\"><a href=\"javascript:weatherAPILL(" + input + ");\">" + data.RESULTS[i].name + "</a></p>";
+        searchHTML += "<a href=\"javascript:weatherAPILL(" + input + ");\"><div class=\"result\">" + data.RESULTS[i].name + "</div></a>";
     }
     $("#searchResults").html(searchHTML);
 }

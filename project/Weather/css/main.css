@@ -67,7 +67,6 @@ header {
     padding-right: 5px;
     margin: 0px;
     margin-right: 5px;
-    
 }
 
 #searchBar:focus {
@@ -107,16 +106,23 @@ header {
 #searchResults {
     width: 100%;
     margin: 0px;
-    padding-bottom: 5px;
+    padding: 0px;
     background-color: #FFCF24;
+    text-align: center;
 }
 
 .result {
+    width: 100%;
     color: black;
     padding-left: 5px;
     margin: 0px;
-    padding-top: 10px;
-    text-align: center;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.result:hover {
+    background-color: #BA9100;
 }
 
 /* main crap */
