@@ -1,4 +1,5 @@
-var weatherData;
+var metric = false;
+var currentData;
 
 console.log("The scripts have started!");
 
@@ -12,15 +13,24 @@ function setData(data) {
     //reset the display search results 
     $("#searchResults").html("");
     //document.getElementById("searchBar").setAttribute("value", " "); //this kills the results display for some reason
+    $("#searchBar").val("");
     //$("main").show();
 
-    $("#temperature").html(Math.round(data.current_observation.temp_f));
+    //non metric stuff
     $("#forcast").html(data.current_observation.weather);
-    //$("#highLow").html()
-    $("#location").html(data.location.city + ", " + data.location.state);
-    $("#windData").html(data.current_observation.wind_mph + " MPH");
     $("#windDirection").html(data.current_observation.wind_dir);
     $("#precipitation").html(data.current_observation.precip_today_metric);
+    $("#location").html(data.location.city + ", " + data.location.state);
+
+    //metric stuff
+    if (metric) {
+        $("#temperature").html(Math.round(data.current_observation.temp_c) + " C");
+        $("#windData").html(data.current_observation.wind_mph + " MPH");
+    } else {
+        $("#temperature").html(Math.round(data.current_observation.temp_f) + " F");
+        $("#windData").html(data.current_observation.wind_kph + " KPH");
+    }
+    //$("#highLow").html()
 }
 
 function weatherAPI(input) {
@@ -31,6 +41,7 @@ function weatherAPI(input) {
         dataType: "jsonp",
         success: function (parsed_json) {
             console.log(parsed_json);
+            currentData = parsed_json;
             setData(parsed_json);
         }
     });
@@ -113,4 +124,15 @@ function onSearchSubmit() {
         });
     }
 
+}
+
+function toggleUnit() {
+    metric = !metric;
+
+    if (metric)
+        $("#toggleUnitButton").val("Imperial");
+    else
+        $("#toggleUnitButton").val("Metric");
+
+    setData(currentData);
 }

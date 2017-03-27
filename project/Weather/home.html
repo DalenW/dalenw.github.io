@@ -17,13 +17,18 @@
         <!-- Top bar with title and hamburger -->
         <h1 class="title">Weather</h1>
 
-        <form method="get" action="javascript:onSearchSubmit()" id="srchfrm" class="search">
-            <input type="search" name="query" id="searchBar" placeholder="Search">
-            <input type="submit" name="submit" value="Go" id="searchButton">
-        </form>
+        <div id="settings">
+            <form id="unit" action="javascript:toggleUnit()">
+                <input type="submit" name="toggleUnit" value="Metric" id="toggleUnitButton" class="button">
+            </form>
+            <form method="get" action="javascript:onSearchSubmit()" id="srchfrm" class="search">
+                <input type="search" name="query" id="searchBar" placeholder="Search">
+                <input type="submit" name="submit" value="Go" id="searchButton" class="button">
+            </form>
+        </div>
 
         <div id="searchResults">
-           <!-- <p class=/"result/"><a onlick="weatherAPI()" href=/"#/">NAME</a></p> -->
+            <!-- <p class=/"result/"><a onlick="weatherAPI()" href=/"#/">NAME</a></p> -->
         </div>
     </header>
 
@@ -111,10 +116,10 @@
                 <h2 id="windDataTitle">Wind</h2>
             </div>
             <div class="windDataBoxMiddle">
-                <p class="windDataInfo" id="windData">1 - 5 MPH</p>
+                <p class="windDataInfo" id="windData">NA</p>
             </div>
             <div class="windDataBoxBottom">
-                <p id="windDirection">Southwest</p>
+                <p id="windDirection">NA</p>
             </div>
         </div>
 
@@ -123,7 +128,7 @@
                 <h2 id="precipDataTitle">Precipitation</h2>
             </div>
             <div class="precipDataBoxBottom">
-                <p class="precipDataInfo" id="precipitation">5</p>
+                <p class="precipDataInfo" id="precipitation">NA</p>
             </div>
         </div>
     </main>
