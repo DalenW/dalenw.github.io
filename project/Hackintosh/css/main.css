@@ -101,9 +101,47 @@ main {
 
 /* Guide CSS */
 
+#guideIntro {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+#showGuide {
+    flex-grow: 1;
+    height: inherit;
+    min-height: 30px;
+}
+
+#showGuideButton {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #EB6E0F;
+}
+
+#showGuideButton:hover {
+    background-color: #BB5302;
+}
+
 #guideTitle {
     text-align: center;
     font-size: 35px;
+    margin: 0px;
+    flex-grow: 5;
+}
+
+/* Guide */
+
+#guidePage {
+    width: 70%;
+    height: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 10px;
 }
 
 h6 {
@@ -111,6 +149,7 @@ h6 {
     font-weight: bold;
     margin: 5px;
     margin-top: 15px;
+    width: 600px;
 }
 
 .link {
@@ -138,10 +177,25 @@ quote {
 
 .code {
     margin-left: 25px;
+    margin-right: 25px;
     background-color: lightgray;
     color: #C0378A;
     padding: 5px;
     padding-left: 7px;
     padding-right: 7px;
     border-radius: 5px;
+}
+
+.guideImage {
+    width: 900px;
+    height: inherit;
+}
+
+.guideImageDiv {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+@media only screen and (min-width: 1000px) {
+   
 }
