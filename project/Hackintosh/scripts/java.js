@@ -42,16 +42,37 @@ function loadGuide(guideNum) {
 
     //parse guide
     var lastLine = "";
+    var listNum = 1;
     for (var i = 0; i < guide.guide.length; i++) {
         var line = guide.guide[i];
+
+        //first replace all \n with <br>
+        for(var x = 0; x < line.length; x++)
+            if(line.substring(x, x + 1) == "\n") 
+                line = line.substring(0, x) + "<br>" + line.substring(x + 1);
 
         if (line.substring(0, 1) == "/") {
             var type = line.substring(1, 2);
             var content = line.substring(3);
 
             //if its code
-            if (type == "c")
-                guideHTML += "<div class=\"code\">" + content + "</div>";
+            var num = 1;
+            if (type == "c") {
+                guideHTML += "<div class=\"code\">";
+                
+                for(var x = 0; x < content.length; x++) {
+                    if(content.substring(x, x + 4) == "<br>") {
+                        var cut = content.substring(0, x + 4);
+                        content = content.substring(x + 4, content.length);
+                        guideHTML += num + ".  " + cut;
+                        num++;  
+                        x = 0;
+                    }
+                }
+                guideHTML += num + ".  " + content;
+
+                guideHTML += "</div>";
+            }
 
             //if its an image
             if (type == "i")
@@ -63,20 +84,23 @@ function loadGuide(guideNum) {
 
             //if its an ordered list 
             //beginning of the list
-            if(type == "o" && lastLine.substring(0, 2) != "/o")
-                guideHTML += "<ol><li>" + content + "</li></ol>";
+            if(type == "o" && lastLine.substring(0, 2) != "/o") 
+                listNum = 1;
+            
             //other list item
-            else if(type == "o"){
-                //remove the </ol>
-                guideHTML = guideHTML.substring(0, guideHTML.length - 5);
-                
-                guideHTML += "<li>" + content + "</li></ol>";
+            if(type == "o"){
+                guideHTML += "<p>" + listNum + ". " + content + "</p>";
+                listNum++;
             }
+            
 
         } else {
             guideHTML += "<p>" + line + "</p>";
         }
-        lastLine = line;
+
+        //make sure that images don't fall under last line
+        if(line.substring(0, 2) != "/i")
+            lastLine = line;
     }
 
     $("#guide").html(guideHTML);
