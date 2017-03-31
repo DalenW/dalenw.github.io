@@ -68,8 +68,28 @@
                 "/i 6.png",
                 "/o Next, you’ll open terminal and run the <quote>uuidgen</quote> command. Paste whatever it spits out the <quote>SmUUID</quote> box.",
                 "/i 7.png",
-                "You are now done and you can boot into your Mac. Enjoy."
+                "You are now done and you can boot into your Mac. Enjoy.",
+
+                "/s SMBIOS List",
+                "Last Updated March 30, 2017",
+                "\n",
+                "Intel/NVIDIA Desktop - <quote>iMac14,2</quote>",
+                "Intel/Integrated - Try to choose the Macbook closest to your CPU's manufactured year.",
+                "Intel Skylake/Integrated - <quote>MacBookPro11,2</quote> or <quote>MacBookPro12,1</quote>",
+                "Intel/AMD Desktop - <quote>MacPro5,1</quote>"
             ]
+        },
+        {
+            "name": "Installing OSX",
+            "image": "InstallingOSX",
+            "folder": "installingosx",
+            "guide": "NA"
+        },
+        {
+            "name": "Manually Adding the Boot Option",
+            "image": "BootOption",
+            "folder": "bootoption",
+            "guide": "NA"
         },
         {
             "name": "Automount the EFI Partition",

@@ -60,17 +60,18 @@
 
 
         <div id="guidePage">
-            <div id="guideIntro">
-                <form id="showGuide" action="javascript:showGuideList()">
-                    <input type="submit" name="showGuideBtn" value="Show Guide List" id="showGuideButton" class="button">
-                </form>
-                <h2 id="guideTitle">
-                    NA 
-                </h2>
-            </div>
+            <h2 id="guideTitle">
+                NA
+            </h2>
+            <form class="showGuide" action="javascript:showGuideList()">
+                <input type="submit" name="showGuideBtn" value="Show Guide List" class="showGuideButton button" id="showGuideButtonTop">
+            </form>
             <div id="guide">
-                
+
             </div>
+            <form class="showGuide" action="javascript:showGuideList()">
+                <input type="submit" name="showGuideBtn" value="Show Guide List" class="showGuideButton button">
+            </form>
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
