@@ -21,14 +21,16 @@ function readData() {
 function createGuideList() {
     var html = "";
 
-    for (var i = 0; i < data.guides.length; i++) {
-        html += "<a href=\"javascript:loadGuide(" + i + ")\">";
-        html += "<div class=\"guideListBox\">";
-        html += "<img src=\"images/" + data.guides[i].folder + "/" + data.guides[i].image + ".png\" alt=\"" + data.guides[i].image + " Icon\" class=\"guideListBoxImage\">";
-        html += "<div class=\"guideListBoxTitleBox\">";
-        html += "<p class=\"guideListBoxTitle\">" + data.guides[i].name;
-        html += "</p></div></div></a>";
-    }
+    for (var i = 0; i < data.guides.length; i++) 
+        if(data.guides[i].show == true) {
+            html += "<a href=\"javascript:loadGuide(" + i + ")\">";
+            html += "<div class=\"guideListBox\">";
+            html += "<img src=\"images/" + data.guides[i].folder + "/" + data.guides[i].image + ".png\" alt=\"" + data.guides[i].image + " Icon\" class=\"guideListBoxImage\">";
+            html += "<div class=\"guideListBoxTitleBox\">";
+            html += "<p class=\"guideListBoxTitle\">" + data.guides[i].name;
+            html += "</p></div></div></a>";
+        }
+        
     $("#guideList").html(html);
 }
 
@@ -51,6 +53,23 @@ function loadGuide(guideNum) {
             if(line.substring(x, x + 1) == "\n") 
                 line = line.substring(0, x) + "<br>" + line.substring(x + 1);
 
+        //then insert tabs
+        for(var x = 0; x < line.length; x++)
+            if(line.substring(x, x + 1) == "\t")
+                line = line.substring(0, x) + "&emsp;" + line.substring(x + 1);
+
+        //then get the quotes line
+        var endQuote = false;
+        for(var x = 0; x < line.length; x++)
+            if(line.substring(x, x + 1) == "`") {
+                if(endQuote)
+                    line = line.substring(0, x) + "</quote>" + line.substring(x + 1);
+                else
+                    line = line.substring(0, x) + "<quote>" + line.substring(x + 1);
+                endQuote = !endQuote;
+            }
+
+        //then parse the guide command
         if (line.substring(0, 1) == "/") {
             var type = line.substring(1, 2);
             var content = line.substring(3);
@@ -64,12 +83,14 @@ function loadGuide(guideNum) {
                     if(content.substring(x, x + 4) == "<br>") {
                         var cut = content.substring(0, x + 4);
                         content = content.substring(x + 4, content.length);
-                        guideHTML += num + ".  " + cut;
+                        //guideHTML += num + ".  " + cut;
+                        guideHTML += cut;
                         num++;  
                         x = 0;
                     }
                 }
-                guideHTML += num + ".  " + content;
+                //guideHTML += num + ".  " + content;
+                guideHTML += content;
 
                 guideHTML += "</div>";
             }
@@ -77,6 +98,10 @@ function loadGuide(guideNum) {
             //if its an image
             if (type == "i")
                 guideHTML += "<div class=\"guideImageDiv\"><img src=\"images/" + guide.folder + "/" + content + "\" class=\"guideImage\"></div>";
+
+            //if its a video
+            if(type == "v")
+                guideHTML += "<div clas\"guideVideoDiv\"><video width=\"1024\" height=\"576\" controls><source src=\"videos/" + guide.folder + "/" + content + "\" type=\"video/" + content.substring(content.length - 3) + "\">Your browser does not support this video. </video></div>";
 
             //if its a section header
             if (type == "s")

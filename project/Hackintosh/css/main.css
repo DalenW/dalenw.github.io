@@ -133,7 +133,7 @@ main {
 
 /* Guide */
 
-#guidePage {
+#guide {
     width: 70%;
     height: 100%;
     margin-left: 15%;
@@ -163,7 +163,7 @@ h6 {
 
 p {
     margin: 4px;
-    padding-left: 25px;
+    padding-left: 5%;
     padding-top: 5px;
 }
 
@@ -173,8 +173,8 @@ quote {
 }
 
 .code {
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
     background-color: lightgray;
     color: #C0378A;
     padding: 5px;
