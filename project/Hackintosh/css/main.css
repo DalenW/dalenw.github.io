@@ -1,4 +1,4 @@
-/* http://paletton.com/#uid=55B0u0kvAnxmOuCtZtuBRjaLhdO */
+/* http://paletton.com/#uid=64E0U0krivXmOGeoYApuetttgnN */
 
 @import url('https://fonts.googleapis.com/css?family=Abel');
 @import url('https://fonts.googleapis.com/css?family=VT323');
@@ -15,12 +15,12 @@ a {
 }
 
 h2 {
-    color: #E70F19;
+    color: #F7475F; 
 }
 
 /* Header */
 header {
-    background-color: black;
+    background-color: #B40F26;
     text-align: center;
     width: 100%;
 }
@@ -117,11 +117,11 @@ main {
     min-height: 30px;
     border: none;
     text-align: center;
-    background-color: #EB6E0F;
+    background-color: #385FB9;
 }
 
 .showGuideButton:hover {
-    background-color: #BB5302;
+    background-color: #18419D;
 }
 
 #guideTitle {
@@ -169,14 +169,14 @@ p {
 
 quote {
     background-color: #f9f2f4;
-    color: #F0454D;
+    color: #F22440;
 }
 
 .code {
     margin-left: 5%;
     margin-right: 5%;
     background-color: lightgray;
-    color: #C0378A;
+    color: #DF0C29;
     padding: 5px;
     padding-left: 7px;
     padding-right: 7px;

@@ -4,7 +4,7 @@
             "name": "Test",
             "image": "Test",
             "folder": "test",
-            "show": true,
+            "show": false,
             "guide": [
                 "Line one",
                 "Line 2", 
