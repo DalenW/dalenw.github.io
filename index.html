@@ -3,74 +3,96 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Dalen Ward</title>
+    <title>Hackintosh Guides</title>
     <meta name="viewport" content="width=device-width">
 
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#30D1C5">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#30D1C5">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#30D1C5">
+    <!-- ****** faviconit.com favicons ****** -->
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="icon" sizes="16x16 32x32 64x64" href="images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="196x196" href="images/favicon/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="images/favicon/favicon-160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="images/favicon/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16.png">
+    <link rel="apple-touch-icon" href="images/favicon/favicon-57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/favicon-114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/favicon-72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/favicon-144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/favicon-60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/favicon-120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/favicon-76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon-180.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/favicon-144.png">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <!-- ****** faviconit.com favicons ****** -->
 
     <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
-    <link type="text/css" rel="stylesheet" href="/styles/main.css">
-    <link type="text/css" rel="stylesheet" href="/styles/index.css">
-
+    <link type="text/css" rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <header>
-        <h1 class="title">Dalen Ward</h1>
-
-        <table border="0" class="linkTable">
-            <tr>
-                <td></td>
-                <td>
-                    <a href="https://github.com/DalenW" class="headLink">
-                        <div class="headBox">GitHub</div>
-                    </a>
-                </td>
-                <td>
-                    <a href="/project/project.html" class="headLink">
-                        <div class="headBox">Projects</div>
-                    </a>
-                </td>
-                <td></td>
-            </tr>
-        </table>
-
+        <a href="index.html">
+            <h1 id="title">Hackintosh</h1>
+        </a>
     </header>
+
     <main>
-        <h2>About</h2>
-        <p>
-            My Name is Dalen Ward. I am majoring in CIT. I live in Idaho. I enjoy computers and I love playing with them. I love hackintoshing computers and crap. I made this website. You can look at my projects.
-        </p>
+        <div id="homePage">
+            <!-- Intro -->
+            <div class="intro">
+                <h2 id="introTitle">
+                    Welcome to my Hackintosh Guide
+                </h2>
+                <p id="introText">
+                    This is a Hackintosh guide site where I make guides and you follow them. If you follow them you will get a Hackintosh working
+                    hopefully. The guides are centered around an Intel/NVIDIA build. You also have to have a mac to do this.
+                </p>
+            </div>
 
-        <h2>Contact</h2>
-        <p>
-            You can contact me by emailing me at <a href="dalen.ward@gmail.com" class="link">dalen.ward@gmail.com</a>.
-        </p>
+            <!-- Guides -->
+            <h2 id="guideListTitle">
+                Guide List
+            </h2>
+            <div id="guideList">
+                <!-- Guide 1 Box -->
+                <!--
+                <a href="BootableUSB.html">
+                    <div class="guideListBox">
+                        <img src="pics/USB.png" alt="USB Icon" class="guideListBoxImage">
+                        <div class="guideListBoxTitleBox">
+                            <p class="guideListBoxTitle">
+                                Creating a Bootable USB
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                -->
+            </div>
+        </div>
 
-        <h2>Links</h2>
 
-        <nav>
-            <ul>
-                <li><a href="homework/homework.html" class="link">Homework</a></li>
-            </ul>
-        </nav>
+        <div id="guidePage">
+            <h2 id="guideTitle">
+                NA
+            </h2>
+            <form class="showGuide" action="javascript:showGuideList()">
+                <input type="submit" name="showGuideBtn" value="Show Guide List" class="showGuideButton button" id="showGuideButtonTop">
+            </form>
+            <div id="guide">
 
-        <h2>Group's Sites</h2>
-
-        <ul>
-            <li><a href="https://actuallychris.github.io" class="link">Chris's Site</a></li>
-            <li><a href="https://saaxmaan.github.io" class="link">Jake's Site</a></li>
-        </ul>
+            </div>
+            <form class="showGuide" action="javascript:showGuideList()">
+                <input type="submit" name="showGuideBtn" value="Show Guide List" class="showGuideButton button">
+            </form>
+        </div>
     </main>
-    <footer>
-        <h5 class="footer">Made by Dalen Ward</h5>
-        <h6 class="footer">Last Updated Feburary 22, 2017</h6>
-    </footer>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="scripts/java.js"></script>
 </body>
 
 </html>
