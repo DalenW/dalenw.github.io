@@ -101,7 +101,7 @@ function loadGuide(guideNum) {
 
             //if its a video
             if(type == "v")
-                guideHTML += "<div clas\"guideVideoDiv\"><video width=\"1024\" height=\"576\" controls><source src=\"videos/" + guide.folder + "/" + content + "\" type=\"video/" + content.substring(content.length - 3) + "\">Your browser does not support this video. </video></div>";
+                guideHTML += "<div class=\"guideVideoDiv\"><video height=\"100%\" width=\"100%\" controls><source src=\"videos/" + guide.folder + "/" + content + "\" type=\"video/" + content.substring(content.length - 3) + "\" class=\"guideVideo\">Your browser does not support this video. </video></div>";
 
             //if its a section header
             if (type == "s")
