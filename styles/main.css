@@ -1,0 +1,76 @@
+/** http://paletton.com/#uid=33g0p0koBLXdQUgjGPXtPHFDdvw **/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.link {
+    color: #FFB53B;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.link:hover {
+    color: white;
+    background-color: #FFB53B;
+    border-radius: 4px;
+    margin: 4px;
+}
+
+header,
+.title {
+    width: 100%;
+    height: 10%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+header {
+    background-color: #30D1C5;
+}
+
+.title {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    font-size: 50px;
+}
+
+main {
+    width: auto;
+    height: 80%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 43px;
+}
+
+h2 {
+    text-align: left;
+    color: #FF6E62;
+}
+
+footer {
+    bottom: 0;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.footer {
+    margin-bottom: 0px;
+}

@@ -4,11 +4,11 @@
             "name": "Test",
             "image": "Test",
             "folder": "test",
-            "show": false,
+            "show": true,
             "guide": [
                 "Line one",
                 "Line 2", 
-                "/c This is code. \n code 2 \n idk",
+                "/c This is code. \n\t code 2 \n idk",
                 "test line",
                 "test `quote` mmk",
                 "/i Test.png",
