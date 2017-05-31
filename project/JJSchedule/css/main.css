@@ -28,7 +28,7 @@ header {
     padding: 20px;
 }
 
-#appBar {
+#appBar,#guestBar {
     text-align: center;
     width: 100%;
     justify-content: center;
@@ -37,7 +37,7 @@ header {
     overflow-y: hidden;
 }
 
-#appBarTable {
+#appBarTable,#guestBarTable {
     margin: 0%;
     margin-bottom: -2px;
     width: 100%;
@@ -53,6 +53,10 @@ header {
     background-color: var(--hoverRed);
 }
 
+.barItemSelected {
+    background-color: var(--selectRed);
+}
+
 .barItemBox {
     width: 100%;
     height: 100%;
@@ -61,6 +65,10 @@ header {
 
 #appBarTable td {
     width: 20%
+}
+
+#guestBarTable td {
+    width: 20%;
 }
 
 main {

@@ -36,6 +36,9 @@
         crossorigin="anonymous"></script>
     <script src="scripts/java.js"></script>
 
+    <script>
+        $("body").hide();
+    </script>
 
 </head>
 
@@ -43,26 +46,48 @@
     <header>
         <h1 id="title">Jimmy Johns Schedules</h1>
 
-        <div id="loginBar">
-
+        <!-- Guest Bar -->
+        <div id="guestBar">
+            <table id="guestBarTable">
+                <tr>
+                    <td></td>
+                    <td class="barItem" id="guestBarAboutBox">
+                        <a href="javascript:showGuestPage('aboutPage', 'guestBarAboutBox')" class="boxItemLink">
+                            <div class="barItemBox">About</div>
+                        </a>
+                    </td>
+                    <td class="barItem" id="guestBarContactBox">
+                        <a href="javascript:showGuestPage('contactPage', 'guestBarContactBox')" class="boxItemLink">
+                            <div class="barItemBox">Contact</div>
+                        </a>
+                    </td>
+                    <td class="barItem" id="guestBarLoginBox">
+                        <a href="javascript:showGuestPage('loginPage', 'guestBarLoginBox')" class="boxItemLink">
+                            <div class="barItemBox">Login</div>
+                        </a>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
 
+        <!-- Application Bar -->
         <div id="appBar">
             <table id="appBarTable">
                 <tr>
                     <td></td>
                     <td class="barItem" id="appBarScheduleBox">
-                        <a href="javascript:showSchedulePage()" class="boxItemLink">
+                        <a href="javascript:showAppPage('schedulePage', 'appBarScheduleBox')" class="boxItemLink">
                             <div class="barItemBox">Schedule</div>
                         </a>
                     </td>
                     <td class="barItem" id="appBarEmployeeBox">
-                        <a href="javascript:showEmployeePage()" class="boxItemLink">
+                        <a href="javascript:showAppPage('employeePage', 'appBarEmployeeBox')" class="boxItemLink">
                             <div class="barItemBox">Employees</div>
                         </a>
                     </td>
                     <td class="barItem" id="appBarAccountBox">
-                        <a href="javascript:showAccountPage()" class="boxItemLink">
+                        <a href="javascript:showAppPage('accountPage', 'appBarAccountBox')" class="boxItemLink">
                             <div class="barItemBox">Account</div>
                         </a>
                     </td>
@@ -74,10 +99,31 @@
     </header>
 
     <main>
+        <!-- *** Guest Pages *** -->
+
+        <!-- About Page -->
+        <div id="aboutPage">
+            <p>This is the About Page.</p>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contactPage">
+            <p>This is the Contact Page</p>
+        </div>
+
+        <!-- Login Page -->
+        <div id="loginPage">
+            <p>This is the Login Page.</p>
+        </div>
+
+        <!-- *** Application Pages *** -->
+
+        <!-- Schedule Page -->
         <div id="schedulePage">
             <p> This is the Schedule Page.</p>
         </div>
 
+        <!-- Employee Page -->
         <div id="employeePage">
             <p>This is the Employee Page.</p>
 
@@ -86,10 +132,12 @@
             </a>
         </div>
 
+        <!-- Add Employee Page -->
         <div id="addEmployeePage">
             <p>This is the add employee page.</p>
         </div>
 
+        <!-- Account Page -->
         <div id="accountPage">
             <p>This is the Account Page</p>
         </div>

@@ -3,12 +3,17 @@
 var jsonID = "d064c276-456f-11e7-ae4c-2fa58361dbb6";
 var jsonObject;
 
+var pageIdList = ["#aboutPage", "#contactPage", "#loginPage", "#schedulePage", "#employeePage", "#accountPage", "#addEmployeePage"];
+var barItemIdList = ["#guestBarAboutBox", "#guestBarContactBox", "#guestBarLoginBox", "#appBarScheduleBox", "#appBarEmployeeBox", "#appBarAccountBox"]
 
 $(document).ready(function() {
     console.log("Starting!");
 
+    $("#appBar").hide();
+
     hideAllPages();
-    showSchedulePage();
+    $("body").show();
+    showGuestPage("aboutPage");
     loadJSON();
     console.log("Done!");
 });
@@ -25,44 +30,35 @@ function loadJSON() {
     });
 }
 
-function showEmployeePage() {
+function showPage(id, callId) {
     hideAllPages();
-    $("#employeePage").show();
-
-    //set the colors
-    $("#appBarEmployeeBox").attr("style", "background-color: var(--selectRed);");
-    $("#appBarScheduleBox").attr("style", "background-color: var(--jimmyRed);");
-    $("#appBarAccountBox").attr("style", "background-color: var(--jimmyRed);");
+    $("#" + id).show();
+    $("#" + callId).addClass("barItemSelected");
 }
 
-function showSchedulePage() {
-    hideAllPages();
-    $("#schedulePage").show();
-
-    //set the colors
-    $("#appBarEmployeeBox").attr("style", "background-color: var(--jimmyRed);");
-    $("#appBarScheduleBox").attr("style", "background-color: var(--selectRed);");
-    $("#appBarAccountBox").attr("style", "background-color: var(--jimmyRed);");
+function showGuestPage(id, callId) {
+    showGuestBar();
+    showPage(id, callId);
 }
 
-function showAccountPage() {
-    hideAllPages();
-    $("#accountPage").show();
-
-    //set the colors
-    $("#appBarEmployeeBox").attr("style", "background-color: var(--jimmyRed);");
-    $("#appBarScheduleBox").attr("style", "background-color: var(--jimmyRed);");
-    $("#appBarAccountBox").attr("style", "background-color: var(--selectRed);");
-}
-
-function showAddEmployeePage() {
-    hideAllPages();
-    $("#addEmployeePage").show();
+function showAppPage(id, callId) {
+    showAppBar();
+    showPage(id, callId);
 }
 
 function hideAllPages() {
-    $("#schedulePage").hide();
-    $("#employeePage").hide();
-    $("#accountPage").hide();
-    $("#addEmployeePage").hide();
+    for(var i = 0; i < pageIdList.length; i++) {
+        $(pageIdList[i]).hide();
+        $(barItemIdList[i]).removeClass("barItemSelected");
+    }
+}
+
+function showGuestBar() {
+    $("#guestBar").show();
+    $("#appBar").hide();
+}
+
+function showAppBar() {
+    $("#guestBar").hide();
+    $("#appBar").show();
 }
