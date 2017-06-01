@@ -31,10 +31,12 @@
 
     <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link type="text/css" rel="stylesheet" href="css/main.css">
+    
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
-    <script src="scripts/java.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/schedule.js"></script>
 
     <script>
         $("body").hide();
@@ -44,7 +46,7 @@
 
 <body>
     <header>
-        <h1 id="title">Jimmy Johns Schedules</h1>
+        <h1 id="title">Jimmy John's Schedules</h1>
 
         <!-- Guest Bar -->
         <div id="guestBar">
@@ -114,6 +116,12 @@
         <!-- Login Page -->
         <div id="loginPage">
             <p>This is the Login Page.</p>
+
+            <p>Login</p>
+            <form method="get" action="javascript:onLoginSubmit()" id="logimForm">
+                <input type="search" name="login" id="loginBar" class="inputBar" placeholder="Login ID">
+                <input type="submit" name="submit" value="Login" id="loginButton" class="button">
+            </form>
         </div>
 
         <!-- *** Application Pages *** -->
@@ -121,6 +129,7 @@
         <!-- Schedule Page -->
         <div id="schedulePage">
             <p> This is the Schedule Page.</p>
+            <h3 id="scheduleTitle">Sample Title</h3>
         </div>
 
         <!-- Employee Page -->

@@ -1,5 +1,6 @@
 /* Jimmy Red: E3363F */
 
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
 :root {
@@ -9,13 +10,15 @@
 }
 
 *{
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', sans-serif;
+    
 }
 
-a {
+a, a:hover {
     text-decoration: none;
     color: black;
 }
+
 
 header {
     background-color: var(--jimmyRed);
@@ -23,9 +26,26 @@ header {
     width: 100%;
 }
 
+.button {
+    border: none;
+    border-radius: 0px;
+    padding: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: lightgrey;
+}
+
+.inputBar {
+    border: 2px solid lightgrey;
+    padding: 3px;
+}
+
 #title {
     margin-top: 0%;
     padding: 20px;
+    width: 100%;
+    font-size: calc(10px + 3vw);
+    font-family: 'Roboto Slab', serif;
 }
 
 #appBar,#guestBar {
@@ -55,6 +75,8 @@ header {
 
 .barItemSelected {
     background-color: var(--selectRed);
+    text-decoration: none;
+    color: black;
 }
 
 .barItemBox {
