@@ -1,0 +1,40 @@
+#employeeGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+}
+
+.employeeGridBox {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 10px;
+    border: 1px solid lightgrey;
+}
+
+.employeeGridInitials  {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.employeeGridBoxTitleBox {
+    width: 100%;
+    height: 25px;
+    background-color: var(--jimmyRed);
+    padding: 0px;
+    margin: 0px;
+}
+
+.employeeGridBoxTitle {
+    margin: 0px;
+    margin-top: 5px;
+    padding: 0px;
+    padding-left: 5px;
+    vertical-align: middle;
+}

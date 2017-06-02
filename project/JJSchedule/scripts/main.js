@@ -17,7 +17,6 @@ $(document).ready(function() {
     //showGuestPage("aboutPage");
     showGuestPage("loginPage");
     loadJSON();
-    console.log("Done!");
 });
 
 function loadJSON() {
@@ -28,21 +27,25 @@ function loadJSON() {
             console.log(parsed_json);
             jsonObject = parsed_json;
             console.log("JSON Loaded");
+            login("sample");
         }
     });
 }
 
 function onLoginSubmit() {
     var loginValue = $("#loginBar").val();
-    
-    var success = false;
-    for(var i = 0; i < jsonObject.length; i++) {
-        if(loginValue === jsonObject[i].id) {
-            success = true;
+    login(loginValue);
+
+}
+
+function login(username) {
+    for(var i = 0; i < jsonObject.length; i++) 
+        if(username === jsonObject[i].id) {
             scheduleData = jsonObject[i];
             showAppPage("schedulePage");
+            return true;
         }
-    }
+    return false;
 }
 
 function showPage(id, callId) {
@@ -52,6 +55,8 @@ function showPage(id, callId) {
 
     if(id == "schedulePage") 
         loadSchedulePage();
+    else if(id == "employeePage")
+        loadEmployeePage();
 }
 
 function showGuestPage(id, callId) {

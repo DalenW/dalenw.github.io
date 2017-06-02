@@ -31,12 +31,15 @@
 
     <link type="text/css" rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css">
     <link type="text/css" rel="stylesheet" href="css/main.css">
-    
+    <link type="text/css" rel="stylesheet" href="css/bar.css">
+    <link type="text/css" rel="stylesheet" href="css/employee.css">
+
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/schedule.js"></script>
+    <script src="scripts/employee.js"></script>
 
     <script>
         $("body").hide();
@@ -128,17 +131,22 @@
 
         <!-- Schedule Page -->
         <div id="schedulePage">
-            <p> This is the Schedule Page.</p>
             <h3 id="scheduleTitle">Sample Title</h3>
         </div>
 
         <!-- Employee Page -->
         <div id="employeePage">
-            <p>This is the Employee Page.</p>
-
-            <a href="javascript:showAddEmployeePage()">
-                <div id="addEmployeeLink">Add Employee</div>
+            <a href="javascript:showAppPage('addEmployeePage')">
+                <div class="linkAsButton" id="addEmployeeLink">Add Employee</div>
             </a>
+
+            <div id="employeeGrid">
+
+            </div>
+
+            <div id="employeeList">
+
+            </div>
         </div>
 
         <!-- Add Employee Page -->

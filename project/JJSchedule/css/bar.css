@@ -1,0 +1,44 @@
+#appBar,#guestBar {
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    margin: 0%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#appBarTable,#guestBarTable {
+    margin: 0%;
+    margin-bottom: -2px;
+    width: 100%;
+}
+
+.barItem {
+    margin: 0%;
+    padding: 7px;
+    min-width: 150px;
+}
+
+.barItem:hover {
+    background-color: var(--hoverRed);
+}
+
+.barItemSelected {
+    background-color: var(--selectRed);
+    text-decoration: none;
+    color: black;
+}
+
+.barItemBox {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+}
+
+#appBarTable td {
+    width: 20%
+}
+
+#guestBarTable td {
+    width: 20%;
+}
