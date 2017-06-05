@@ -4,8 +4,8 @@ var jsonID = "d064c276-456f-11e7-ae4c-2fa58361dbb6";
 var jsonObject;
 var scheduleData;
 
-var pageIdList = ["#aboutPage", "#contactPage", "#loginPage", "#schedulePage", "#employeePage", "#accountPage", "#addEmployeePage"];
-var barItemIdList = ["#guestBarAboutBox", "#guestBarContactBox", "#guestBarLoginBox", "#appBarScheduleBox", "#appBarEmployeeBox", "#appBarAccountBox"]
+var pageIdList = ["#aboutPage", "#contactPage", "#loginPage", "#schedulePage", "#employeePage", "#storePage", "#accountPage", "#addEmployeePage"];
+var barItemIdList = ["#guestBarAboutBox", "#guestBarContactBox", "#guestBarLoginBox", "#appBarScheduleBox", "#appBarEmployeeBox", "#appBarStoreBox", "#appBarAccountBox"]
 
 $(document).ready(function() {
     console.log("Starting!");
@@ -42,7 +42,8 @@ function login(username) {
     for(var i = 0; i < jsonObject.length; i++) 
         if(username === jsonObject[i].id) {
             scheduleData = jsonObject[i];
-            showAppPage("schedulePage");
+            //showAppPage("schedulePage");
+            showAppPage("employeePage");
             return true;
         }
     return false;

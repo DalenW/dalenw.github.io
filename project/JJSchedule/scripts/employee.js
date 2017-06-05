@@ -6,7 +6,8 @@ function loadEmployeePage() {
     $("#employeeList").hide();
     $("#employeeGrid").hide();
     employeeList = scheduleData.employees;
-    loadEmployeeGrid();
+    //loadEmployeeGrid();
+    loadEmployeeList();
 }
 
 function loadEmployeeGrid() {
@@ -25,4 +26,23 @@ function loadEmployeeGrid() {
 
     $("#employeeGrid").html(html);
     console.log("Loaded Employee Grid");
+}
+
+function loadEmployeeList() {
+    $("#employeeGrid").hide();
+    $("#employeeList").show();
+
+    var html = "";
+
+    for(var i  = 0; i < employeeList.length; i++) {
+        html += "<tr class=\"employeeListItem\">";
+        html += "<td class=\"employeeListNum\">" + (i + 1) + "</td>";
+        html += "<td class=\"employeeListName\">" + employeeList[i].firstName + " " + employeeList[i].lastName + "</td>";
+        html += "<td class=\"employeeListEditCol\"><a href=\"javascript:editEmployee(" + i + ")\">";
+        html += "<div class=\"employeeListEditBox\">Edit</div>";
+        html += "</a></td></tr>";
+
+        $("#employeeListTable").html(html);
+        console.log("Loaded Employee List");
+    }
 }

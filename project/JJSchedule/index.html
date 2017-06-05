@@ -91,13 +91,17 @@
                             <div class="barItemBox">Employees</div>
                         </a>
                     </td>
+                    <td class="barItem" id="appBarStoreBox">
+                        <a href="javascript:showAppPage('storePage', 'appBarStoreBox')" class="boxItemLink">
+                            <div class="barItemBox">Store</div>
+                        </a>
+                    </td>
                     <td class="barItem" id="appBarAccountBox">
                         <a href="javascript:showAppPage('accountPage', 'appBarAccountBox')" class="boxItemLink">
                             <div class="barItemBox">Account</div>
                         </a>
                     </td>
                     <td></td>
-
                 </tr>
             </table>
         </div>
@@ -145,13 +149,20 @@
             </div>
 
             <div id="employeeList">
-
+                <table id="employeeListTable">
+                    
+                </table>
             </div>
         </div>
 
         <!-- Add Employee Page -->
         <div id="addEmployeePage">
             <p>This is the add employee page.</p>
+        </div>
+
+        <!-- Store Page -->
+        <div id="storePage">
+            <p>This is the store page.</p>
         </div>
 
         <!-- Account Page -->
